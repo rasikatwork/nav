@@ -1,0 +1,37 @@
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Dynemic Nav using Angular JS</title>  
+	<link rel="stylesheet" type="text/css" href="app.css" />
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="underscore.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="angular.js"></script>
+	<script src="angular-route.min.js" type="text/javascript"></script>
+	<script src="angular-ui-router.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="nav.js"></script>
+</head>
+<body>
+	<div  ng-controller="MainCtrl">
+		<div> 
+			 <div class="row">
+				<div class="col-md-12" style="background-color:red;height:100px;"> 
+					<h1 class="text-center" > Dashboard </h1>
+				</div>
+			 </div>
+<!--			 <div class="row debug" style="background-color:gray;height:600px;">
+			 	<div class="col-md-3"  > 
+					<nav items="navList" callback="navClick" selected="{{navSelected}}" child-selected="{{navChildSelected}}" />
+				</div>
+				<div class="col-md-9" > </div>
+			 </div>  -->
+			 
+			 <div ui-view>
+			 
+		</div>
+		
+	</div>
+</body>
+</html>

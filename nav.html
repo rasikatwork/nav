@@ -1,0 +1,12 @@
+<div class="row subNav">
+	<div class="col-xs-12 " >
+		<div class="row navSeperator " ng-repeat="item in items">
+			<div class="col-xs-12 parentitem" ng-class="itemClass($index,item)" ng-click="navClick($index,item)">{{item.name}}</div>
+			<div class="col-xs-12" ng-if="selected == $index">
+				<div class="row" ng-repeat="child in item.children">
+					<div class="item child link col-xs-12" ng-class="childSelectedClass($index,$last)" ng-click="subNavClick($index,item,child)">{{child.name}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
